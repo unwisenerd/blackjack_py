@@ -13,3 +13,7 @@ class Chips:
 
     def lose_bet(self):
         self.total -= self.bet
+
+    # TODO: add saving of won amount of chips for the next round
+    def update_total(self, new_amout):
+        self.total = new_amout
