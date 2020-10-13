@@ -1,7 +1,7 @@
 #
 # cards deck class
 #
-from random import random
+import random
 from Cards import Card
 from Utilities import get_suits, get_ranks
 
@@ -17,10 +17,16 @@ def get_deck():
 class Deck:
 
     def __init__(self):
-        self.all_cards = get_deck()
+        self.deck = get_deck()
+
+    def __str__(self):
+        deck_comp = ''
+        for card in self.deck:
+            deck_comp += '\n' + card.__str__()
+        return 'The deck has: ' + deck_comp
 
     def shuffle_deck(self):
-        random.shuffle(self.all_cards)
+        random.shuffle(self.deck)
 
     def deal_one(self):
-        return self.all_cards.pop()
+        return self.deck.pop()

@@ -12,4 +12,4 @@ class Card:
         self.value = get_rank_values_dict()[rank]
 
     def __str__(self):
-        return self.rank + " of" + self.suit
+        return self.rank + " of " + self.suit
